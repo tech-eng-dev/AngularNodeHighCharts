@@ -1,0 +1,12 @@
+<section>
+  <label>Language: </label>
+  <select [ngModel]="language" (ngModelChange)="onChangeLanguage($event)" [disabled]="loading">
+    <option *ngFor="let language of languages" [ngValue]="language">{{language}}</option>
+  </select>
+</section>
+<br>
+<section>
+  <label>Repo count: </label>
+  <input type="number" min="1" max="20" [ngModel]="repoCount" (ngModelChange)="onRepoCountChange($event)" [disabled]="loading">
+</section>
+<div id="container"></div>
